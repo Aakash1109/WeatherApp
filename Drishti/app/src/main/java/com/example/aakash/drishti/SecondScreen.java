@@ -1,15 +1,19 @@
 package com.example.aakash.drishti;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
-public class SecondScreen extends Fragment {
+public class SecondScreen extends Fragment implements View.OnClickListener {
+    private View mView;
+    Button button1, button2, button3,button4;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -38,8 +42,41 @@ public class SecondScreen extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second_screen, container, false);
+        mView= inflater.inflate(R.layout.fragment_second_screen, container, false);
+        button1=(Button)mView.findViewById(R.id.five);
+        button1.setOnClickListener(this);
+        button2=(Button)mView.findViewById(R.id.six);
+        button2.setOnClickListener(this);
+        button3=(Button)mView.findViewById(R.id.seven);
+        button3.setOnClickListener(this);
+        button4=(Button)mView.findViewById(R.id.eight);
+        button4.setOnClickListener(this);
+        return mView;
     }
 
 
+    @Override
+    public void onClick(View view)
+    {
+        switch (view.getId())
+        {
+            case R.id.five:
+                Intent intent = new Intent(getActivity(),GestureActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.six:
+                Intent intent1 = new Intent(getActivity(),CurrentDateTime.class);
+                startActivity(intent1);
+                break;
+            case R.id.seven:
+                Intent intent2 = new Intent(getActivity(),LocationTracker.class);
+                startActivity(intent2);
+                break;
+            case R.id.eight:
+                Intent intent3 = new Intent(getActivity(),PhoneBook.class);
+                startActivity(intent3);
+                break;
+
+        }
+    }
 }

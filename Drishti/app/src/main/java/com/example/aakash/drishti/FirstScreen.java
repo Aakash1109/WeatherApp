@@ -13,7 +13,7 @@ import android.widget.Button;
 
 public class FirstScreen extends Fragment implements View.OnClickListener {
     private View mView;
-    Button button1, button2, button3;
+    Button button1, button2, button3,button4;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -49,6 +49,8 @@ public class FirstScreen extends Fragment implements View.OnClickListener {
         button2.setOnClickListener(this);
         button3=(Button)mView.findViewById(R.id.three);
         button3.setOnClickListener(this);
+        button4=(Button)mView.findViewById(R.id.four);
+        button4.setOnClickListener(this);
         return mView;
     }
 
@@ -69,6 +71,12 @@ public class FirstScreen extends Fragment implements View.OnClickListener {
             case R.id.three:
                 Intent intent2 = new Intent(getActivity(),LocationTracker.class);
                 startActivity(intent2);
+                break;
+            case R.id.four:
+                Intent intent3 = new Intent(getActivity(),PhoneBook.class);
+                startActivity(intent3);
+                break;
+
         }
     }
 }

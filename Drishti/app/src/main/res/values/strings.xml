@@ -21,4 +21,14 @@
     <string name="cannot_load_library">cannot load gesture library</string>
     <string name="test_gesture_activity_label">Test Gesture</string>
     <string name="draw_a_gesture">Draw a gesture, I will try to recognize!</string>
+
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Add Contact Demo</string>
+    <string name="hnt_et_name">Display Name</string>
+    <string name="hnt_et_mobile_phone">Mobile Phone</string>
+    <string name="hnt_et_home_phone">Home Phone</string>
+    <string name="hnt_et_home_email">Home Email</string>
+    <string name="hnt_et_work_email">Work Email</string>
+    <string name="str_btn_add">Add Contact</string>
+    <string name="str_btn_contacts">Contacts List</string>
 </resources>
