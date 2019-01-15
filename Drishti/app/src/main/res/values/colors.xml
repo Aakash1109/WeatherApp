@@ -191,5 +191,7 @@
     <color name="blue_semi_transparent_pressed">#80738ffe</color>
 
 
+    <color name="colorBackground">#fc98dc95</color>
+    <color name="colorButton">#ffee6f</color>
 
 </resources>
